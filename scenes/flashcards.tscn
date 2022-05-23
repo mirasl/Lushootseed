@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Lushootseed-Sulad.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/flashcard.gd" type="Script" id=2]
+[ext_resource path="res://tres/default_theme.tres" type="Theme" id=3]
+
+
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[node name="Flashcards" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Term" type="RichTextLabel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -362.0
+custom_fonts/normal_font = SubResource( 1 )
+text = "hi sdadasdasd"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Definition" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -0.749146
+margin_right = 40.0
+margin_bottom = 39.2509

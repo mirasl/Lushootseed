@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/trim.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/menu.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.156863, 0.439216, 0.627451, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Menu" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_right = 1080.0
+margin_bottom = 1920.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 100
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 200
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 980.0
+margin_bottom = 1720.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MarginContainer2/VBoxContainer"]
+margin_right = 880.0
+margin_bottom = 132.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "[TEXT HERE]"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/VBoxContainer"]
+margin_top = 212.0
+margin_right = 880.0
+margin_bottom = 1620.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="resized" from="MarginContainer2" to="MarginContainer2" method="_on_MarginContainer_resized"]
