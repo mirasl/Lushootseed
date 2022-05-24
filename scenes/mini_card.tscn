@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/mini_card.gd" type="Script" id=1]
+[ext_resource path="res://tres/light_blue_rect.tres" type="StyleBox" id=2]
+[ext_resource path="res://tres/english_default_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://tres/lushootseed_font.tres" type="DynamicFont" id=4]
+
+[node name="MiniCard" type="PanelContainer"]
+margin_right = 780.0
+custom_styles/panel = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 780.0
+margin_bottom = 195.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Term" type="RichTextLabel" parent="VBoxContainer"]
+margin_right = 780.0
+margin_bottom = 102.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+fit_content_height = true
+
+[node name="Definition" type="RichTextLabel" parent="VBoxContainer"]
+margin_top = 106.0
+margin_right = 780.0
+margin_bottom = 195.0
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+fit_content_height = true

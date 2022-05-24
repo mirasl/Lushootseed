@@ -2,36 +2,34 @@ extends Node
 
 const FILE_PATH = "res://vocab.json"
 
+export var term_number : int = 0
+
 var data : Array
-var term_number : int = 0
+var revealed = false setget set_revealed
 
 
 func _ready():
-	data = get_data()
+	set_revealed(false)
+	data = Global.get_file_data(FILE_PATH)
 	print_to_screen()
 
 
-func get_data() -> Array:
-	var f = File.new()
-	assert(f.file_exists(FILE_PATH), "File does not exist")
-	
-	f.open(FILE_PATH, File.READ)
-	var json = f.get_as_text()
-	
-	var output = parse_json(json)
-	
-	if typeof(output) == TYPE_ARRAY:
-		return output
-	else:
-		return []
-
-
 func print_to_screen():
-	$Term.bbcode_text = data[term_number]["Term"]
-	$Definition.bbcode_text = data[term_number]["Definition"]
+	var term = data[term_number]["Term"]
+	$MarginContainer/VBoxContainer/Term.bbcode_text = "[center]%s[/center]" % term
 	
-	
-	
-	
-	
-	
+	var definition = data[term_number]["Definition"]
+	$MarginContainer/VBoxContainer/MarginContainer/Definition.bbcode_text = "[center]%s[/center]" % definition
+
+
+func set_revealed(state : bool):
+	if state:
+		$MarginContainer/VBoxContainer/MarginContainer/Definition.show()
+		$MarginContainer/VBoxContainer/MarginContainer/Button.hide()
+	else:
+		$MarginContainer/VBoxContainer/MarginContainer/Definition.hide()
+		$MarginContainer/VBoxContainer/MarginContainer/Button.show()
+
+
+func _on_Button_pressed():
+	set_revealed(true)

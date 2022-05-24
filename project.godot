@@ -8,15 +8,24 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "PanelContainer",
+"class": "MiniCard",
+"language": "GDScript",
+"path": "res://scenes/mini_card.gd"
+} ]
 _global_script_class_icons={
-
+"MiniCard": ""
 }
 
 [application]
 
 config/name="Lushootseed"
 run/main_scene="res://scenes/home.tscn"
+
+[autoload]
+
+Global="*res://scenes/global.gd"
 
 [display]
 
@@ -25,6 +34,10 @@ window/size/height=1920
 window/handheld/orientation="portrait"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 

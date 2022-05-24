@@ -1,3 +1,14 @@
 [
-    {"Term":"dxʷləšucid", "Definition":"Lushootseed"}
+    {"Term":"dxʷləšucid", "Definition":"Lushootseed", "Category":"General"},
+    {"Term":"p'aƛ'", "Definition":"Zero", "Category":"Numbers"},
+    {"Term":"dəč'uʔ", "Definition":"One", "Category":"Numbers"},
+    {"Term":"saliʔ", "Definition":"Two", "Category":"Numbers"},
+    {"Term":"łixʷ", "Definition":"Three", "Category":"Numbers"},
+    {"Term":"buus", "Definition":"Four", "Category":"Numbers"},
+    {"Term":"cəlac", "Definition":"Five", "Category":"Numbers"},
+    {"Term":"dᶻəlačiʔ", "Definition":"Six", "Category":"Numbers"},
+    {"Term":"c'ukʷs", "Definition":"Seven", "Category":"Numbers"},
+    {"Term":"təqačiʔ", "Definition":"Eight", "Category":"Numbers"},
+    {"Term":"x̌ʷəl", "Definition":"Nine", "Category":"Numbers"},
+    {"Term":"padac", "Definition":"Ten", "Category":"Numbers"}
 ]

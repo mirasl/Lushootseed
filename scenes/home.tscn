@@ -7,10 +7,10 @@
 [node name="Home" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 
-[node name="Label" parent="MarginContainer2/VBoxContainer" index="0"]
-text = "LUSHOOTSEED"
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+text = "HOME"
 
-[node name="Button" parent="MarginContainer2/VBoxContainer/VBoxContainer" index="0" instance=ExtResource( 2 )]
+[node name="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" index="0" instance=ExtResource( 2 )]
 margin_top = 0.0
 margin_right = 880.0
 margin_bottom = 322.0
@@ -18,7 +18,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "ALPHABET"
 
-[node name="Button2" parent="MarginContainer2/VBoxContainer/VBoxContainer" index="1" instance=ExtResource( 2 )]
+[node name="Button2" parent="MarginContainer/VBoxContainer/VBoxContainer" index="1" instance=ExtResource( 2 )]
 margin_top = 362.0
 margin_right = 880.0
 margin_bottom = 684.0
@@ -26,7 +26,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "VOCABULARY"
 
-[node name="Button3" parent="MarginContainer2/VBoxContainer/VBoxContainer" index="2" instance=ExtResource( 2 )]
+[node name="Button3" parent="MarginContainer/VBoxContainer/VBoxContainer" index="2" instance=ExtResource( 2 )]
 margin_top = 724.0
 margin_right = 880.0
 margin_bottom = 1046.0
@@ -34,14 +34,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "GEOGRAPHY"
 
-[node name="Button4" parent="MarginContainer2/VBoxContainer/VBoxContainer" index="3" instance=ExtResource( 2 )]
+[node name="Button4" parent="MarginContainer/VBoxContainer/VBoxContainer" index="3" instance=ExtResource( 2 )]
 margin_top = 1086.0
 margin_right = 880.0
 margin_bottom = 1408.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "ABOUT LUSHOOTSEED"
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
-[connection signal="pressed" from="MarginContainer2/VBoxContainer/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]

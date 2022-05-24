@@ -8,7 +8,7 @@ func _on_Button_pressed(): # ALPHABET
 
 
 func _on_Button2_pressed(): # VOCABULARY
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/vocabulary.tscn")
 
 
 func _on_Button3_pressed(): # GEOGRAPHY
