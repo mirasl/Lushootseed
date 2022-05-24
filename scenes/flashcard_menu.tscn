@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/menu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tres/gray_rect.tres" type="StyleBox" id=2]
+[ext_resource path="res://scenes/flashcard_menu.gd" type="Script" id=3]
+
+[node name="FlashcardMenu" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+
+[node name="Label" parent="MarginContainer/VBoxContainer" index="0"]
+margin_bottom = 267.0
+text = "FLASHCARD PRACTICE"
+autowrap = true
+
+[node name="VBoxContainer" parent="MarginContainer/VBoxContainer" index="1"]
+margin_top = 347.0
+margin_right = 0.0
+margin_bottom = 347.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer" index="2"]
+margin_top = 427.0
+margin_right = 880.0
+margin_bottom = 1620.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/PanelContainer" index="0"]
+margin_right = 880.0
+margin_bottom = 1193.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 50
+custom_constants/margin_top = 50
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 50
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer" index="0"]
+margin_left = 50.0
+margin_top = 50.0
+margin_right = 830.0
+margin_bottom = 1143.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/bg = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer" index="0"]
+margin_right = 780.0
+margin_bottom = 1093.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
