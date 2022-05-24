@@ -9,3 +9,5 @@ func set_categories(value):
 	categories = value
 	for category in categories:
 		add_item(category)
+
+

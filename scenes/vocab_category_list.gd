@@ -29,10 +29,19 @@ func search_cards(text : String) -> Array:
 	return results
 
 
-func create_search_box(results : Array):
+func create_search_box(results : Array) -> SearchBox:
+	for child in $MarginContainer.get_children():
+		if child is SearchBox:
+			child.queue_free()
+	var search_box = preload("res://scenes/search_box.tscn")
+	search_box = search_box.instance()
+	search_box.set_categories(categories)
+	$MarginContainer.add_child(search_box)
 	for card in results:
-		$MarginContainer/SearchBox.add_mini_card(card)
-	$MarginContainer/SearchBox.popup()
+		search_box.add_mini_card(card)
+	search_box.popup()
+	search_box.connect("filter_selected", self, "_on_SearchBox_filter_selected")
+	return search_box
 
 
 func _on_LineEdit_text_entered(new_text):
@@ -44,12 +53,23 @@ func _on_ViewTerms_pressed():
 	create_search_box(data) # Create search box of all cards
 
 
-func _on_OptionButton_item_selected(index):
-	var category : String = categories[index]
-	print(categories)
-	print(category)
+func _on_SearchBox_filter_selected(index):
+	print("hi")
+	if index == 0: # All terms selected
+		print("hi")
+		_on_ViewTerms_pressed()
+		return
 	var results : Array = []
+	var category : String = categories[index]
 	for card in data:
 		if card["Category"].nocasecmp_to(category) == 0:
 			results.append(card)
-	create_search_box(results)
+	var search_box = create_search_box(results)
+	var category_button = search_box.get_node_or_null("PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton")
+	if category_button:
+		category_button.selected = index
+
+
+
+
+

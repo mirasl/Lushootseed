@@ -93,6 +93,8 @@ margin_left = 100.0
 margin_top = 100.0
 margin_right = 988.0
 margin_bottom = 820.0
+window_title = "Vocabulry Terms"
 [connection signal="text_changed" from="MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_changed"]
 [connection signal="text_entered" from="MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="." method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/ViewTerms" to="." method="_on_ViewTerms_pressed"]
+[connection signal="filter_selected" from="MarginContainer/SearchBox" to="." method="_on_SearchBox_filter_selected"]

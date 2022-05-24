@@ -7,6 +7,7 @@
 [node name="SearchBox" type="WindowDialog"]
 margin_right = 880.0
 margin_bottom = 1420.0
+popup_exclusive = true
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,3 +46,4 @@ margin_bottom = 88.0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 [connection signal="popup_hide" from="." to="." method="_on_SearchBox_popup_hide"]
+[connection signal="item_selected" from="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton" to="." method="_on_CategoryButton_item_selected"]

@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "MiniCard",
 "language": "GDScript",
 "path": "res://scenes/mini_card.gd"
+}, {
+"base": "WindowDialog",
+"class": "SearchBox",
+"language": "GDScript",
+"path": "res://scenes/search_box.gd"
 } ]
 _global_script_class_icons={
-"MiniCard": ""
+"MiniCard": "",
+"SearchBox": ""
 }
 
 [application]

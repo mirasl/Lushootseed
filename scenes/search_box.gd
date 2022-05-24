@@ -1,5 +1,8 @@
 extends WindowDialog
 
+signal filter_selected
+
+class_name SearchBox
 
 func add_mini_card(card):
 	var term = card["Term"]
@@ -16,3 +19,15 @@ func _on_SearchBox_popup_hide():
 	for child in panel_container.get_children():
 		if child is MiniCard:
 			child.queue_free()
+
+
+func _on_CategoryButton_item_selected(index):
+	emit_signal("filter_selected", index)
+
+
+func clear():
+	_on_SearchBox_popup_hide()
+
+
+func set_categories(c):
+	$PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories = c
