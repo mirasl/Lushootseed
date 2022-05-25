@@ -43,3 +43,7 @@ func button_pressed():
 				Global.term_list = results
 				get_tree().change_scene("res://scenes/vocab_practice.tscn")
 
+
+
+func _on_Back_pressed():
+	get_tree().change_scene("res://scenes/vocabulary.tscn")

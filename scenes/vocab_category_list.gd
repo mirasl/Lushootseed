@@ -70,6 +70,7 @@ func _on_SearchBox_filter_selected(index):
 		category_button.selected = index
 
 
-
+func _on_Back_pressed():
+	get_tree().change_scene("res://scenes/vocabulary.tscn")
 
 

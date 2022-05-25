@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/trim.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://tres/gray_rect.tres" type="StyleBox" id=2]
 [ext_resource path="res://scenes/flashcard_menu.gd" type="Script" id=3]
+[ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=4]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
@@ -106,4 +107,7 @@ margin_bottom = 1093.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 20
+
+[node name="Back" parent="." instance=ExtResource( 4 )]
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
+[connection signal="pressed" from="Back" to="PanelContainer" method="_on_Back_pressed"]
