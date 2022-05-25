@@ -97,18 +97,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+[node name="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+margin_top = 0.0
 margin_right = 880.0
 margin_bottom = 322.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "ALPHABET"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button2" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+[node name="Button2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 362.0
 margin_right = 880.0
 margin_bottom = 684.0
@@ -116,11 +114,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "VOCABULARY"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button3" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+[node name="Button3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 724.0
 margin_right = 880.0
 margin_bottom = 1046.0
@@ -128,11 +123,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "GEOGRAPHY"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="Button4" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
+[node name="Button4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 1086.0
 margin_right = 880.0
 margin_bottom = 1408.0
@@ -140,9 +132,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "ABOUT LUSHOOTSEED"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Button" to="PanelContainer" method="_on_Button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Button2" to="PanelContainer" method="_on_Button2_pressed"]

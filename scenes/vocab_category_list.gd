@@ -52,6 +52,7 @@ func _on_LineEdit_text_entered(new_text):
 
 
 func _on_ViewTerms_pressed():
+	all_results = [] + data
 	create_search_box(data) # Create search box of all cards
 
 
