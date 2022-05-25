@@ -6,7 +6,7 @@ func _physics_process(delta):
 
 
 func _on_Button_pressed():
-	pass
+	get_tree().change_scene("res://scenes/flashcard_menu.tscn")
 
 
 func _on_Button2_pressed():

@@ -1,6 +1,9 @@
 extends Node
 
 
+var term_list : Array
+
+
 func get_file_data(file_path : String) -> Array:
 	var f = File.new()
 	assert(f.file_exists(file_path), "File does not exist")

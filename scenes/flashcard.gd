@@ -1,24 +1,26 @@
 extends Node
 
-const FILE_PATH = "res://vocab.json"
-
 export var term_number : int = 0
 
 var data : Array
 var revealed = false setget set_revealed
 
 
-func _ready():
+func show_term(term : String, definition : String):
 	set_revealed(false)
-	data = Global.get_file_data(FILE_PATH)
-	print_to_screen()
+	print_to_screen(term, definition)
 
 
-func print_to_screen():
+func print_card_number_to_screen(term_number : int): # this is what happens when you dont have overloading
 	var term = data[term_number]["Term"]
 	$MarginContainer/VBoxContainer/Term.bbcode_text = "[center]%s[/center]" % term
 	
 	var definition = data[term_number]["Definition"]
+	$MarginContainer/VBoxContainer/MarginContainer/Definition.bbcode_text = "[center]%s[/center]" % definition
+
+
+func print_to_screen(term : String, definition : String):
+	$MarginContainer/VBoxContainer/Term.bbcode_text = "[center]%s[/center]" % term
 	$MarginContainer/VBoxContainer/MarginContainer/Definition.bbcode_text = "[center]%s[/center]" % definition
 
 
