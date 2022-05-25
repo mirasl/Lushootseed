@@ -31,3 +31,7 @@ func clear():
 
 func set_categories(c):
 	$PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories = c
+
+
+func get_categories():
+	return $PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories
