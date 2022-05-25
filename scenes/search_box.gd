@@ -4,6 +4,12 @@ signal filter_selected
 
 class_name SearchBox
 
+
+func _ready():
+	var x_button = get_close_button()
+	x_button.hide()
+
+
 func add_mini_card(card):
 	var term = card["Term"]
 	var definition = card["Definition"]
@@ -35,3 +41,7 @@ func set_categories(c):
 
 func get_categories():
 	return $PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories
+
+
+func _on_Button_pressed():
+	queue_free()
