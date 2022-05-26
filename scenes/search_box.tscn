@@ -37,7 +37,8 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [node name="SearchBox" type="WindowDialog"]
-margin_right = 880.0
+margin_left = 100.0
+margin_right = 980.0
 margin_bottom = 1420.0
 theme = SubResource( 1 )
 custom_styles/panel = SubResource( 2 )

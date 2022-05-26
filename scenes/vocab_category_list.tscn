@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://tres/dark_blue_rect.tres" type="StyleBox" id=1]
 [ext_resource path="res://scenes/vocab_category_list.gd" type="Script" id=2]
@@ -9,37 +9,36 @@
 [ext_resource path="res://scenes/line_edit.gd" type="Script" id=7]
 [ext_resource path="res://assets/trim.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://scenes/search_box.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/search_box.gd" type="Script" id=10]
 [ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=11]
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=2]
 size = 90
 use_filter = true
 font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.317647, 0.427451, 0.501961, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=4]
 size = 60
 use_filter = true
 font_data = ExtResource( 8 )
 
-[sub_resource type="StyleBoxFlat" id=3]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.403922, 0.411765, 0.427451, 1 )
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="Theme" id=4]
+[sub_resource type="Theme" id=6]
 default_font = ExtResource( 5 )
 Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
@@ -47,7 +46,7 @@ Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
 Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
 Button/constants/hseparation = 2
 Button/fonts/font = null
-Button/styles/disabled = SubResource( 3 )
+Button/styles/disabled = SubResource( 5 )
 Button/styles/focus = ExtResource( 1 )
 Button/styles/hover = ExtResource( 3 )
 Button/styles/normal = ExtResource( 1 )
@@ -64,7 +63,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 8.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,7 +96,7 @@ __meta__ = {
 margin_right = 888.0
 margin_bottom = 132.0
 size_flags_horizontal = 3
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 2 )
 text = "VOCABULARY LIST"
 align = 1
 autowrap = true
@@ -119,7 +118,7 @@ __meta__ = {
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 888.0
 margin_bottom = 180.0
-custom_styles/panel = SubResource( 7 )
+custom_styles/panel = SubResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer"]
 margin_right = 888.0
@@ -145,7 +144,7 @@ script = ExtResource( 7 )
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit"]
 margin_right = 40.0
 margin_bottom = 14.0
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 0.501961 )
 text = "[enter search]"
 align = 1
@@ -153,29 +152,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ViewTerms" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
+[node name="ViewTerms" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
 margin_top = 280.0
 margin_right = 888.0
 margin_bottom = 508.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = SubResource( 4 )
+theme = SubResource( 6 )
 text = "View all terms"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="SearchBox" type="WindowDialog" parent="PanelContainer/MarginContainer" instance=ExtResource( 9 )]
-margin_left = 100.0
+[node name="SearchBox" parent="PanelContainer/MarginContainer" instance=ExtResource( 9 )]
 margin_top = 100.0
 margin_right = 988.0
 margin_bottom = 820.0
-popup_exclusive = true
 window_title = "Vocabulry Terms"
-script = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Back" parent="." instance=ExtResource( 11 )]
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
@@ -183,5 +173,4 @@ __meta__ = {
 [connection signal="text_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="PanelContainer" method="_on_LineEdit_text_entered"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ViewTerms" to="PanelContainer" method="_on_ViewTerms_pressed"]
 [connection signal="filter_selected" from="PanelContainer/MarginContainer/SearchBox" to="PanelContainer" method="_on_SearchBox_filter_selected"]
-[connection signal="popup_hide" from="PanelContainer/MarginContainer/SearchBox" to="PanelContainer/MarginContainer/SearchBox" method="_on_SearchBox_popup_hide"]
 [connection signal="pressed" from="Back" to="PanelContainer" method="_on_Back_pressed"]
