@@ -4,7 +4,7 @@
 # https://godotengine.org/qa/66634/how-to-check-if-a-camera2d-reached-its-limits
 extends Camera2D 
 
-const LIMITS = Rect2(-1000, -1200, 3500, 5000)
+const LIMITS = Rect2(-1000, 500, 3500, 5000)
 
 var min_zoom = 0.5
 var max_zoom = 4

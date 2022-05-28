@@ -11,7 +11,7 @@ func _ready():
 	if type == 0: # Village
 		set_modulate(Color.lightcoral)
 	elif type == 1:
-		set_modulate(Color.skyblue)
+		set_modulate(Color.cyan)
 
 
 func _on__pressed():

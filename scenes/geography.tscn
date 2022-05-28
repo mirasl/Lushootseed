@@ -1,20 +1,28 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/seattle_map.png" type="Texture" id=1]
 [ext_resource path="res://scenes/touch_camera.gd" type="Script" id=2]
 [ext_resource path="res://assets/blank.png" type="Texture" id=3]
 [ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/geography.gd" type="Script" id=5]
+[ext_resource path="res://assets/seattle_surroundings_map.png" type="Texture" id=6]
 [ext_resource path="res://scenes/pin.tscn" type="PackedScene" id=8]
 
 [node name="Geography" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Blank" type="Sprite" parent="."]
+visible = false
 modulate = Color( 0.4, 0.737255, 0.752941, 1 )
 position = Vector2( 1099.59, 2079.7 )
 scale = Vector2( 2924.06, 4095.81 )
 texture = ExtResource( 3 )
+
+[node name="seattle_surroundings_map" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.584314 )
+position = Vector2( 359.203, 3029.87 )
+scale = Vector2( 15.1134, 15.1134 )
+texture = ExtResource( 6 )
 
 [node name="seattle_map" type="Sprite" parent="."]
 position = Vector2( 0, -1.25989 )
