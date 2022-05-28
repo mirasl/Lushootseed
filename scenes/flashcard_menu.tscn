@@ -106,7 +106,7 @@ margin_right = 780.0
 margin_bottom = 1093.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_constants/separation = 20
+custom_constants/separation = 80
 
 [node name="Back" parent="." instance=ExtResource( 4 )]
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]

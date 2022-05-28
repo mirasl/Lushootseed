@@ -4,7 +4,7 @@ extends "res://scenes/menu.gd"
 
 
 func _on_Button_pressed(): # ALPHABET
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/alphabet.tscn")
 
 
 func _on_Button2_pressed(): # VOCABULARY
