@@ -15,4 +15,4 @@ func _ready():
 
 
 func _on__pressed():
-		emit_signal("location_pressed", LName, EName)
+		emit_signal("location_pressed", LName, EName, type)

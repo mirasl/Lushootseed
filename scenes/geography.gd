@@ -11,10 +11,11 @@ func _on_Back_pressed():
 	get_tree().change_scene("res://scenes/home.tscn")
 
 
-func _on_Button_location_pressed(LName : String, EName : String):
+func _on_Button_location_pressed(LName : String, EName : String, type : int):
 	var window = preload("res://scenes/place_window.tscn")
 	window = window.instance()
 	window.LName = LName
 	window.EName = EName
+	window.type = type
 	$CanvasLayer.add_child(window)
 	window.popup()
