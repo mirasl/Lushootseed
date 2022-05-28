@@ -12,7 +12,7 @@ func _on_Button2_pressed(): # VOCABULARY
 
 
 func _on_Button3_pressed(): # GEOGRAPHY
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/geography.tscn")
 
 
 func _on_Button4_pressed(): # ABOUT LUSHOOTSEED

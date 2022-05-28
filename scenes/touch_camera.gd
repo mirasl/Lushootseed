@@ -17,15 +17,16 @@ var last_drag_distance = 0
 
 func _unhandled_input(event):
 	if event is InputEventScreenTouch:
+		for e in events:
+			events.erase(e)
 		if event.pressed:
 			events[event.index] = event
-		else:
-			events.erase(event.index)
+	
 	
 	if event is InputEventScreenDrag:
 		events[event.index] = event
 		if events.size() == 1: # one touch
-			var nextpos = position + event.relative*zoom.x*-1
+			var nextpos = position - event.relative*zoom.x
 			if (LIMITS.position.x < nextpos.x and 
 					nextpos.x < LIMITS.size.x and
 					LIMITS.position.y < nextpos.y and

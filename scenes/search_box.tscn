@@ -6,20 +6,14 @@
 [ext_resource path="res://scenes/search_box.gd" type="Script" id=4]
 [ext_resource path="res://tres/english_default_font.tres" type="DynamicFont" id=5]
 [ext_resource path="res://scenes/button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://tres/window_default.tres" type="Theme" id=7]
+[ext_resource path="res://tres/window_stylebox_default.tres" type="StyleBox" id=8]
 
-[sub_resource type="Theme" id=1]
-WindowDialog/colors/title_color = Color( 0, 0, 0, 1 )
-WindowDialog/constants/close_h_ofs = 18
-WindowDialog/constants/close_v_ofs = 30
-WindowDialog/constants/scaleborder_size = 0
-WindowDialog/constants/title_height = 60
-WindowDialog/fonts/title_font = ExtResource( 5 )
-WindowDialog/icons/close = null
-WindowDialog/icons/close_highlight = null
-WindowDialog/styles/panel = null
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=2]
-expand_margin_top = 60.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
@@ -30,18 +24,13 @@ bg_color = Color( 0.6, 0.6, 0.6, 0 )
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
 [node name="SearchBox" type="WindowDialog"]
 margin_left = 100.0
+margin_top = 200.0
 margin_right = 980.0
-margin_bottom = 1420.0
-theme = SubResource( 1 )
-custom_styles/panel = SubResource( 2 )
+margin_bottom = 1620.0
+theme = ExtResource( 7 )
+custom_styles/panel = ExtResource( 8 )
 popup_exclusive = true
 script = ExtResource( 4 )
 __meta__ = {
@@ -91,11 +80,11 @@ margin_top = -84.8788
 margin_right = 888.408
 margin_bottom = 9.12125
 theme = null
-custom_styles/hover = SubResource( 3 )
-custom_styles/pressed = SubResource( 4 )
-custom_styles/focus = SubResource( 5 )
-custom_styles/disabled = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/disabled = SubResource( 4 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "X"
