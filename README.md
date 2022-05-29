@@ -6,7 +6,7 @@ work is buried deeply in the internet, and most of it is largely unaccessible un
 
 Features:
 - An explanation of the Lushootseed alphabet and its various sounds
-- A list of vocabulary words that is not hardcoded and flexible to updates (see ____)
+- A list of vocabulary words that is not hardcoded and flexible to updates (see CONTRIBUTE file)
 - A simple flashcard feature to practice the vocabulary terms
 - An interactive map of the Seattle area displaying various Lushootseed place names
 - Information about the history of the Lushootseed language
@@ -14,8 +14,8 @@ Features:
 
 FAQ:
 
-Q: "How can one contribute to the vocabulary words?"
-A: See _____
+Q: "How can I contribute to the vocabulary words?"
+A: All you need to do is edit the vocab.json file - see CONTRIBUTE file for details!
 
 Q: "Why is this being made in a physics/game engine?"
-A: Because Godot has a fairly powerful UI program, but really because I didn't have much time to learn an alternative and this is all I know.
+A: Because Godot's UI program works well, but really because I was on a strict schedule and didn't have any time to learn an alternative.
