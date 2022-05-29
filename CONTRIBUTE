@@ -14,11 +14,17 @@ All the vocabulary used in the app is stored in the vocab.json file. The vocabul
 {"Term":"<LUSHOOTSEED WORD HERE>", "Definition":"<ENGLISH WORD HERE>", "Category":"<CATEGORY HERE>"},
 
 (Note that the last line will not have a comma, and the entire document is enclosed in [] brackets as a dictionary.
-With the example above: everything within <>, including the <> symbols, should be replaced with the intended term.)
+With the example above: everything within <>, including the <> symbols, should be replaced with the intended text.)
 
 In order to change vocabulary, all you have to do is add or edit a line following the above format and the rest of the
 app should respond accordingly. The vocabulary terms will be added to the vocabulary list in the app as well as the
 flashcards, and will be sorted by category. Feel free to create your own new categories, the app will automatically create 
-more category filters/flashcard decks as needed.
+more category filters/flashcard decks as needed. 
+
+Regarding special Lushootseed characters - the app is formatted with a Lushootseed font which can read unicode
+characters such as the ones on the Lushootseed keyboard provided here: https://keyman.com/keyboards/lushootseed
+*Note: ɬ is read successfully by the app's font, but ł is not, despite both often being treated as interchangable. ɬ is the symbol
+provided by the keyboard, so once again, if you use the keyboard you'll be fine.
+
 
 Thank you!
