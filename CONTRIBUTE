@@ -1,0 +1,24 @@
+How to contribute vocabulary (it is very simple, no coding needed!):
+
+(intro)
+This application was purposefully designed around the idea of constantly being able to update vocabulary terms.
+Lushootseed is not an incredibly widespread language, and thus a lot of vocabulary is lacking - many words are likely already
+lost forever. Because of the language's smaller scale, it is not widely available across the internet or other immiediate sources outside
+of the Lushootseed Dictionary. It is entirely possible (and likely) that speakers of Lushootseed are aware of many nuances
+and even possibly extra words which have never been documented. As language preservation hopefully continues, this app can be
+updated to reflect advances.
+
+HOW TO CONTRIBUTE:
+All the vocabulary used in the app is stored in the vocab.json file. The vocabulary is stored in the following format:
+
+{"Term":"<LUSHOOTSEED WORD HERE>", "Definition":"<ENGLISH WORD HERE>", "Category":"<CATEGORY HERE>"},
+
+(Note that the last line will not have a comma, and the entire document is enclosed in [] brackets as a dictionary.
+With the example above: everything within <>, including the <> symbols, should be replaced with the intended term.)
+
+In order to change vocabulary, all you have to do is add or edit a line following the above format and the rest of the
+app should respond accordingly. The vocabulary terms will be added to the vocabulary list in the app as well as the
+flashcards, and will be sorted by category. Feel free to create your own new categories, the app will automatically create 
+more category filters/flashcard decks as needed.
+
+Thank you!
