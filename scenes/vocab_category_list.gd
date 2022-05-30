@@ -17,10 +17,6 @@ func _ready():
 	$MarginContainer/SearchBox/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories = categories
 
 
-func _on_LineEdit_text_changed(new_text):
-	$MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit/Label.hide()
-
-
 func search_cards(text : String) -> Array:
 	var results : Array = []
 	for card in data:
