@@ -29,6 +29,7 @@ Button/styles/pressed = ExtResource( 3 )
 margin_top = -1.0
 margin_right = 899.0
 margin_bottom = 151.0
+mouse_filter = 1
 theme = SubResource( 2 )
 text = "Type Here"
 __meta__ = {

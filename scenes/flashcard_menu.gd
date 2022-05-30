@@ -14,9 +14,9 @@ func _ready():
 			categories.append(category)
 	
 	var v_box_container = $MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer
-	var button = preload("res://scenes/button.tscn")
+	var rich_button = preload("res://scenes/rich_button.tscn")
 	for category in categories:
-		var category_button = button.instance()
+		var category_button = rich_button.instance()
 		category_button.text = category
 		v_box_container.add_child(category_button)
 		category_button.connect("pressed", self, "button_pressed")
@@ -29,7 +29,7 @@ func _ready():
 func button_pressed():
 	var v_box_container = $MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer
 	for child in v_box_container.get_children():
-		if child is Button:
+		if child is RichButton:
 			if child.pressed:
 				if child.get_index() == 0: # "all terms" button
 					Global.term_list = data
