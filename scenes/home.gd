@@ -16,4 +16,4 @@ func _on_Button3_pressed(): # GEOGRAPHY
 
 
 func _on_Button4_pressed(): # ABOUT LUSHOOTSEED
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/about.tscn")

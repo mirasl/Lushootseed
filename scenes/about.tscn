@@ -1,0 +1,132 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/trim.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scenes/touch_scroll.gd" type="Script" id=2]
+[ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/about.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 90
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 55
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 70
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="About" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+margin_right = 1080.0
+margin_bottom = 1920.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 100
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 150
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer"]
+margin_left = 50.0
+margin_top = 100.0
+margin_right = 1030.0
+margin_bottom = 1770.0
+script = ExtResource( 2 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer"]
+margin_right = 968.0
+margin_bottom = 9362.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 80
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_right = 968.0
+margin_bottom = 267.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 2 )
+text = "ABOUT LUSHOOTSEED"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 347.0
+margin_right = 968.0
+margin_bottom = 7148.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Lushootseed is the language of the many tribes along the Puget Sound. Historically, Lushootseed has been divided into two major dialects, Northern and Southern. The land that is today Seattle has historically been inhabited by the Duwamish tribe, which belongs to the Southern dialect of Lushootseed.
+
+Throughout history, Lushootseed has been used orally to pass down stories and traditions. The language was not officially written and documented until around the 1950s. Currently, language preservationists are at work attempting to regain the aspects of Lushootseed that have blurred over the past century and a half.
+
+The reason for this loss and endangerment of language is due to the European settlement of the Puget Sound area. When European settlers reached the Puget Sound, a treaty was signed between Chief Si'ahl (of whom Seattle is named after) and the settlers. The treaty, called the Treaty of Point Elliot, signed away 54,000 acres of land, today some of the most valuable in the entire country, upon which Seattle, Bellevue, Renton, Tukwila, and their surrounding metropolitain areas now stand.
+
+After the Treaty of Point Elliot, many injustices were commited against the Native peoples of the Puget Sound. Longhouses and villages were burned to the ground by the United States government. Children in Native American families were taken from their parents and forced into America's Indian Boarding Schools, where they suffered abuse and cultural erasure. Children were strapped for speaking Lushootseed, and adults would pinch their tongues, figuratively taking the language out of their mouths.
+
+Because of the many injustices commited against the Native peoples of the Puget Sound, Lushootseed is not what it once was - but it does not have to be this way. Language revitalization is possible and has historically worked best by taking whatever has been documented and making it readily available and accessible for common speach. The goal of this application is to provide a simple, accessible gateway into learning Lushootseed for those unfamiliar with the language, and to provide an easy lexical, alphabetical, and geographical reference for anybody 
+in use of the language."
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 7228.0
+margin_right = 968.0
+margin_bottom = 7437.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "A note to non-Salish Seattle residents:"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 7517.0
+margin_right = 968.0
+margin_bottom = 9362.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "If you live in Seattle or any of its surrounding areas, you live on land that was taken from others who have lived on it for centuries. The pavement you walk and drive on once housed trees, rivers, wildlife, and villages central to Native cultures. It is impossible to ignore this history and the language tied to it. Those living in Seattle should feel obligated to learn at least a little bit about its language and history - one of the best ways to do this, along with supporting the thriving Native American population today, is by paying attention and respect to the Lushootseed language. If you are going to learn a language, learn this one!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" parent="." instance=ExtResource( 3 )]
+[connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

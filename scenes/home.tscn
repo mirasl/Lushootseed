@@ -39,6 +39,7 @@ Button/styles/pressed = ExtResource( 6 )
 [node name="Home" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = -3.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,7 +54,7 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
-margin_right = 1080.0
+margin_right = 1077.0
 margin_bottom = 1920.0
 custom_constants/margin_right = 100
 custom_constants/margin_top = 100
@@ -66,7 +67,7 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 margin_left = 100.0
 margin_top = 100.0
-margin_right = 980.0
+margin_right = 977.0
 margin_bottom = 1720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -76,19 +77,20 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
-margin_right = 880.0
-margin_bottom = 132.0
+margin_right = 877.0
+margin_bottom = 267.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
-text = "HOME"
+text = "LUSHOOTSEED IN SEATTLE"
 align = 1
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
-margin_top = 212.0
-margin_right = 880.0
+margin_top = 347.0
+margin_right = 877.0
 margin_bottom = 1620.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -99,35 +101,35 @@ __meta__ = {
 
 [node name="Button" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
 margin_top = 0.0
-margin_right = 880.0
-margin_bottom = 322.0
+margin_right = 877.0
+margin_bottom = 288.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "ALPHABET"
 
 [node name="Button2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
-margin_top = 362.0
-margin_right = 880.0
-margin_bottom = 684.0
+margin_top = 328.0
+margin_right = 877.0
+margin_bottom = 616.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "VOCABULARY"
 
 [node name="Button3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
-margin_top = 724.0
-margin_right = 880.0
-margin_bottom = 1046.0
+margin_top = 656.0
+margin_right = 877.0
+margin_bottom = 944.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "GEOGRAPHY"
 
 [node name="Button4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 2 )]
-margin_top = 1086.0
-margin_right = 880.0
-margin_bottom = 1408.0
+margin_top = 984.0
+margin_right = 877.0
+margin_bottom = 1273.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
