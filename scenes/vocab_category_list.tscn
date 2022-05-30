@@ -62,7 +62,7 @@ __meta__ = {
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 8.0
+margin_bottom = 140.0
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
 __meta__ = {
@@ -70,8 +70,8 @@ __meta__ = {
 }
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
-margin_right = 1088.0
-margin_bottom = 1920.0
+margin_right = 1080.0
+margin_bottom = 2060.0
 custom_constants/margin_right = 100
 custom_constants/margin_top = 100
 custom_constants/margin_left = 100
@@ -83,8 +83,8 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 margin_left = 100.0
 margin_top = 100.0
-margin_right = 988.0
-margin_bottom = 820.0
+margin_right = 980.0
+margin_bottom = 960.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 80
@@ -93,7 +93,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
-margin_right = 888.0
+margin_right = 880.0
 margin_bottom = 132.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 2 )
@@ -106,8 +106,8 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
 margin_top = 212.0
-margin_right = 888.0
-margin_bottom = 720.0
+margin_right = 880.0
+margin_bottom = 860.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 100
@@ -116,16 +116,16 @@ __meta__ = {
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
-margin_right = 888.0
+margin_right = 880.0
 margin_bottom = 180.0
 custom_styles/panel = SubResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer"]
-margin_right = 888.0
+margin_right = 880.0
 margin_bottom = 180.0
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
-margin_right = 888.0
+margin_right = 880.0
 margin_bottom = 88.0
 custom_fonts/font = ExtResource( 5 )
 text = "Search for term:"
@@ -133,7 +133,7 @@ align = 1
 
 [node name="LineEdit" type="LineEdit" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer"]
 margin_top = 92.0
-margin_right = 888.0
+margin_right = 880.0
 margin_bottom = 180.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -154,8 +154,8 @@ __meta__ = {
 
 [node name="ViewTerms" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
 margin_top = 280.0
-margin_right = 888.0
-margin_bottom = 508.0
+margin_right = 880.0
+margin_bottom = 648.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 6 )
@@ -163,8 +163,7 @@ text = "View all terms"
 
 [node name="SearchBox" parent="PanelContainer/MarginContainer" instance=ExtResource( 9 )]
 margin_top = 100.0
-margin_right = 988.0
-margin_bottom = 820.0
+margin_bottom = 960.0
 window_title = "Vocabulry Terms"
 
 [node name="Back" parent="." instance=ExtResource( 11 )]

@@ -16,3 +16,11 @@ func _input(event):
 					text = new_text.substr(0,max_length)
 					emit_signal("text_changed", new_text)
 					emit_signal("text_entered", new_text)
+	
+	
+func _process(delta):
+	var regex = RegEx.new()
+	regex.compile("[^A-Za-z0-9]")
+	var result = regex.search(get_text())
+	if result:
+		set("custom_fonts/font", load("res://tres/lushootseed_font.tres"))
