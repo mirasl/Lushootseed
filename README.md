@@ -18,4 +18,4 @@ Q: "How can I contribute to the vocabulary words?"
 A: All you need to do is edit the vocab.json file - see CONTRIBUTE file for details!
 
 Q: "Why is this being made in a physics/game engine?"
-A: Because Godot's UI program works well, but really because I was on a strict schedule and didn't have any time to learn an alternative.
+A: Because Godot's UI program works well and I know how to use it - I do plan on stripping the 3D (and maybe some 2D elements as well), so stay tuned.
