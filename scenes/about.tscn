@@ -59,7 +59,7 @@ script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer"]
 margin_right = 968.0
-margin_bottom = 9362.0
+margin_bottom = 11386.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 80
@@ -121,6 +121,32 @@ margin_bottom = 9362.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "If you live in Seattle or any of its surrounding areas, you live on land that was taken from others who have lived on it for centuries. The pavement you walk and drive on once housed trees, rivers, wildlife, and villages central to Native cultures. It is impossible to ignore this history and the language tied to it. Those living in Seattle should feel obligated to learn at least a little bit about its language and history - one of the best ways to do this, along with supporting the thriving Native American population today, is by paying attention and respect to the Lushootseed language. If you are going to learn a language, learn this one!"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 9442.0
+margin_right = 968.0
+margin_bottom = 9545.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 4 )
+text = "Next steps:"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
+margin_top = 9625.0
+margin_right = 968.0
+margin_bottom = 11386.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "If you are interested in fully learning Lushootseed, only using a phone app isn't going to give you the in-person conversation necessary to learn the entire language in all its depth and nuances (despite what some language companies want you to believe). Lushootseed learning opportunities are offered by the Puyallup and Tulalip tribes (note that Tulalip Lushootseed falls more into the Northern category, unlike the historical Southern dialect of the Seattle area). The University of Washington also offers Southern Lushootseed as a language course through their Department of American Indian Studies. Good luck!"
 align = 1
 autowrap = true
 __meta__ = {
