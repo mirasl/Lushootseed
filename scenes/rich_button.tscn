@@ -74,4 +74,5 @@ custom_styles/focus = SubResource( 5 )
 custom_styles/disabled = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
 flat = true
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

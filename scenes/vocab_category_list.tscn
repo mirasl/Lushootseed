@@ -28,7 +28,7 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=4]
 size = 60
 use_filter = true
 font_data = ExtResource( 12 )
@@ -154,7 +154,7 @@ margin_bottom = 190.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/normal = ExtResource( 4 )
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 max_length = 100
 placeholder_text = "[enter search]"
 caret_blink = true
@@ -177,6 +177,7 @@ theme = SubResource( 7 )
 text = "Contribute Vocabulary"
 
 [node name="SearchBox" parent="PanelContainer/MarginContainer" instance=ExtResource( 9 )]
+visible = false
 margin_top = 100.0
 margin_bottom = 1110.0
 window_title = "Vocabulry Terms"
@@ -185,6 +186,7 @@ window_title = "Vocabulry Terms"
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
 [connection signal="text_changed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="PanelContainer" method="_on_LineEdit_text_changed"]
 [connection signal="text_entered" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="PanelContainer" method="_on_LineEdit_text_entered"]
+[connection signal="text_entered_vk" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PanelContainer/VBoxContainer/LineEdit" to="PanelContainer" method="_on_LineEdit_text_entered_vk"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ViewTerms" to="PanelContainer" method="_on_ViewTerms_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Contribute" to="PanelContainer" method="_on_Contribute_pressed"]
 [connection signal="filter_selected" from="PanelContainer/MarginContainer/SearchBox" to="PanelContainer" method="_on_SearchBox_filter_selected"]

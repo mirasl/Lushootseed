@@ -4,6 +4,7 @@ const FILE_PATH = "res://vocab.json"
 
 var data : Array
 var categories : Array = ["All terms"]
+var enabled = true
 
 func _ready():
 	data = Global.get_file_data(FILE_PATH)
@@ -27,23 +28,34 @@ func _ready():
 		
 
 func button_pressed():
-	var v_box_container = $MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer
-	for child in v_box_container.get_children():
-		if child is RichButton:
-			if child.pressed:
-				if child.get_index() == 0: # "all terms" button
-					Global.term_list = data
+	yield(get_tree().create_timer(0.01), "timeout") # to ensure enabled has been updated
+	if enabled:
+		var v_box_container = $MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer
+		for child in v_box_container.get_children():
+			if child is RichButton:
+				if child.pressed:
+					print("4")
+					if child.get_index() == 0: # "all terms" button
+						Global.term_list = data
+						get_tree().change_scene("res://scenes/vocab_practice.tscn")
+						return
+					var category_selected = categories[child.get_index()]
+					var results : Array = []
+					for card in data:
+						if card["Category"].nocasecmp_to(category_selected) == 0:
+							results.append(card)
+					Global.term_list = results
 					get_tree().change_scene("res://scenes/vocab_practice.tscn")
-					return
-				var category_selected = categories[child.get_index()]
-				var results : Array = []
-				for card in data:
-					if card["Category"].nocasecmp_to(category_selected) == 0:
-						results.append(card)
-				Global.term_list = results
-				get_tree().change_scene("res://scenes/vocab_practice.tscn")
+	else:
+		enabled = true
 
 
 
 func _on_Back_pressed():
 	get_tree().change_scene("res://scenes/vocabulary.tscn")
+
+
+
+
+func _on_ScrollContainer_disable_press():
+	enabled = false

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/trim.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://tres/gray_rect.tres" type="StyleBox" id=2]
 [ext_resource path="res://scenes/flashcard_menu.gd" type="Script" id=3]
 [ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/touch_scroll.gd" type="Script" id=5]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.109804, 0.109804, 0.109804, 1 )
@@ -100,6 +101,7 @@ margin_bottom = 1143.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_styles/bg = ExtResource( 2 )
+script = ExtResource( 5 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer"]
 margin_right = 780.0
@@ -109,5 +111,7 @@ size_flags_vertical = 3
 custom_constants/separation = 40
 
 [node name="Back" parent="." instance=ExtResource( 4 )]
+
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
+[connection signal="disable_press" from="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/ScrollContainer" to="PanelContainer" method="_on_ScrollContainer_disable_press"]
 [connection signal="pressed" from="Back" to="PanelContainer" method="_on_Back_pressed"]

@@ -77,3 +77,7 @@ func _on_Back_pressed():
 
 func _on_Contribute_pressed():
 	OS.shell_open("https://github.com/strawberrypi3/Lushootseed")
+
+
+#func _on_LineEdit_text_entered_vk(new_text):
+#	_on_LineEdit_text_entered(new_text)

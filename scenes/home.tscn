@@ -134,6 +134,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = SubResource( 4 )
 text = "ABOUT LUSHOOTSEED"
+
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Button" to="PanelContainer" method="_on_Button_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/Button2" to="PanelContainer" method="_on_Button2_pressed"]

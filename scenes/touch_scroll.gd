@@ -6,6 +6,11 @@ extends ScrollContainer
 # Allows you to scroll a scroll container by dragging.
 # Includes momentum.
 
+signal disable_press
+
+const BUTTON_THRESHOLD = 100
+
+var start_scroll_v : int
 var swiping = false
 var swipe_start
 var swipe_mouse_start
@@ -42,9 +47,18 @@ func _input(ev):
 				tween.interpolate_callback(tween, flick_dur, 'queue_free')
 				tween.start()
 			swiping = false
+			var difference = abs(swipe_start.y - scroll_vertical)
+			if difference > BUTTON_THRESHOLD:
+				print("big swipe")
+				if (get_tree().current_scene.get_filename() == 
+						"res://scenes/flashcard_menu.tscn"):
+					for child in $VBoxContainer.get_children():
+						if child is RichButton:
+							emit_signal("disable_press")
 	elif swiping and ev is InputEventMouseMotion:
 		var delta = ev.position - swipe_mouse_start
 		set_h_scroll(swipe_start.x - delta.x)
 		set_v_scroll(swipe_start.y - delta.y)
 		swipe_mouse_times.append(OS.get_ticks_msec())
 		swipe_mouse_positions.append(ev.position)
+
