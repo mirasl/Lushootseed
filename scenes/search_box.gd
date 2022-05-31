@@ -25,6 +25,8 @@ func _on_SearchBox_popup_hide():
 	for child in panel_container.get_children():
 		if child is MiniCard:
 			child.queue_free()
+	if get_tree().current_scene.get_filename() == "res://scenes/vocab_category_list.tscn":
+		get_parent().hide_gray_overlay()
 
 
 func _on_CategoryButton_item_selected(index):
@@ -45,3 +47,8 @@ func get_categories():
 
 func _on_Button_pressed():
 	queue_free()
+
+
+#func popup(r = Rect2(0,0,0,0)):
+#	.popup()
+#	get_parent().add_child()

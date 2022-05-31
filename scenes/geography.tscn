@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/seattle_map.png" type="Texture" id=1]
 [ext_resource path="res://scenes/touch_camera.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/geography.gd" type="Script" id=5]
 [ext_resource path="res://assets/seattle_surroundings_map.png" type="Texture" id=6]
+[ext_resource path="res://tres/gray_overlay.tres" type="StyleBox" id=7]
 [ext_resource path="res://scenes/pin.tscn" type="PackedScene" id=8]
 
 [node name="Geography" type="Node2D"]
@@ -39,6 +40,16 @@ script = ExtResource( 2 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Back" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="GrayPanel" type="Panel" parent="CanvasLayer"]
+margin_left = -7809.0
+margin_top = -3134.0
+margin_right = 8447.0
+margin_bottom = 9203.0
+custom_styles/panel = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="A" parent="." instance=ExtResource( 8 )]
 margin_left = 1537.7

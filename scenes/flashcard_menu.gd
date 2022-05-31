@@ -34,7 +34,6 @@ func button_pressed():
 		for child in v_box_container.get_children():
 			if child is RichButton:
 				if child.pressed:
-					print("4")
 					if child.get_index() == 0: # "all terms" button
 						Global.term_list = data
 						get_tree().change_scene("res://scenes/vocab_practice.tscn")
@@ -50,11 +49,8 @@ func button_pressed():
 		enabled = true
 
 
-
 func _on_Back_pressed():
 	get_tree().change_scene("res://scenes/vocabulary.tscn")
-
-
 
 
 func _on_ScrollContainer_disable_press():

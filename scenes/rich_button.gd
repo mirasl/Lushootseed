@@ -23,5 +23,4 @@ func _process(delta):
 func _on_Button_pressed():
 	pressed = true
 	emit_signal("pressed")
-	print(pressed)
 

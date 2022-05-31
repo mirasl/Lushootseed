@@ -14,8 +14,9 @@ func _ready():
 		if not categories.has(category):
 			categories.append(category)
 	
-	$MarginContainer/SearchBox/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories = categories
-
+	$SearchBox/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/CategoryButton.categories = categories
+	
+	$GrayPanel.hide()
 
 func search_cards(text : String) -> Array:
 	var results : Array = []
@@ -27,16 +28,19 @@ func search_cards(text : String) -> Array:
 
 
 func create_search_box(results : Array) -> SearchBox:
-	for child in $MarginContainer.get_children():
+#	for child in $MarginContainer.get_children():
+	for child in get_children():
 		if child is SearchBox:
 			child.queue_free()
 	var search_box = preload("res://scenes/search_box.tscn")
 	search_box = search_box.instance()
 	search_box.set_categories(categories)
-	$MarginContainer.add_child(search_box)
+#	$MarginContainer.add_child(search_box)
+	add_child(search_box)
 	for card in results:
 		search_box.add_mini_card(card)
 	search_box.popup()
+	$GrayPanel.show()
 	search_box.connect("filter_selected", self, "_on_SearchBox_filter_selected")
 	return search_box
 
@@ -59,7 +63,8 @@ func _on_SearchBox_filter_selected(index):
 	var results : Array = []
 	var category : String = categories[index]
 	var searchbox
-	for child in $MarginContainer.get_children():
+#	for child in $MarginContainer.get_children():
+	for child in get_children():
 		if child is SearchBox:
 			searchbox = child
 	for card in all_results:
@@ -76,8 +81,11 @@ func _on_Back_pressed():
 
 
 func _on_Contribute_pressed():
-	OS.shell_open("https://github.com/strawberrypi3/Lushootseed")
+	OS.shell_open("https://github.com/strawberrypi3/Lushootseed") # need to make this page public
 
+
+func hide_gray_overlay():
+	$GrayPanel.hide()
 
 #func _on_LineEdit_text_entered_vk(new_text):
 #	_on_LineEdit_text_entered(new_text)

@@ -22,3 +22,5 @@ func _ready():
 
 func _on_Button_pressed():
 	queue_free()
+	if get_tree().current_scene.get_filename() == "res://scenes/geography.tscn":
+		get_parent().get_parent().hide_gray_overlay()

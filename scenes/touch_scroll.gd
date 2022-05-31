@@ -49,12 +49,7 @@ func _input(ev):
 			swiping = false
 			var difference = abs(swipe_start.y - scroll_vertical)
 			if difference > BUTTON_THRESHOLD:
-				print("big swipe")
-				if (get_tree().current_scene.get_filename() == 
-						"res://scenes/flashcard_menu.tscn"):
-					for child in $VBoxContainer.get_children():
-						if child is RichButton:
-							emit_signal("disable_press")
+				emit_signal("disable_press")
 	elif swiping and ev is InputEventMouseMotion:
 		var delta = ev.position - swipe_mouse_start
 		set_h_scroll(swipe_start.x - delta.x)
