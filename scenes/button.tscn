@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://tres/dark_blue_rect.tres" type="StyleBox" id=1]
+[ext_resource path="res://tres/red.tres" type="StyleBox" id=1]
 [ext_resource path="res://tres/english_default_font.tres" type="DynamicFont" id=2]
-[ext_resource path="res://tres/light_blue_rect.tres" type="StyleBox" id=3]
+[ext_resource path="res://tres/light_red_rect.tres" type="StyleBox" id=3]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.403922, 0.411765, 0.427451, 1 )

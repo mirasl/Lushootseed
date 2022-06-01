@@ -59,7 +59,7 @@ script = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer"]
 margin_right = 968.0
-margin_bottom = 11386.0
+margin_bottom = 11638.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 80
@@ -82,10 +82,10 @@ __meta__ = {
 [node name="Label2" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
 margin_top = 347.0
 margin_right = 968.0
-margin_bottom = 7148.0
+margin_bottom = 7400.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
-text = "Lushootseed is the language of the many tribes along the Puget Sound. Historically, Lushootseed has been divided into two major dialects, Northern and Southern. The land that is today Seattle has historically been inhabited by the Duwamish tribe, which belongs to the Southern dialect of Lushootseed.
+text = "Lushootseed is the language of the many tribes along the Puget Sound. Historically, Lushootseed has been divided into two major dialects, Northern and Southern. The land that is today Seattle has historically been inhabited by the Duwamish tribe, the People of the Inside, who speak the Southern form of Lushootseed. This app specifically utilizes vocabulary from the Southern dialect of Lushootseed.
 
 Throughout history, Lushootseed has been used orally to pass down stories and traditions. The language was not officially written and documented until around the 1950s. Currently, language preservationists are at work attempting to regain the aspects of Lushootseed that have blurred over the past century and a half.
 
@@ -102,9 +102,9 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 7228.0
+margin_top = 7480.0
 margin_right = 968.0
-margin_bottom = 7437.0
+margin_bottom = 7689.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "A note to non-Salish Seattle residents:"
@@ -115,9 +115,9 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 7517.0
+margin_top = 7769.0
 margin_right = 968.0
-margin_bottom = 9362.0
+margin_bottom = 9614.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "If you live in Seattle or any of its surrounding areas, you live on land that was taken from others who have lived on it for centuries. The pavement you walk and drive on once housed trees, rivers, wildlife, and villages central to Native cultures. It is impossible to ignore this history and the language tied to it. Those living in Seattle should feel obligated to learn at least a little bit about its language and history - one of the best ways to do this, along with supporting the thriving Native American population today, is by paying attention and respect to the Lushootseed language. If you are going to learn a language, learn this one!"
@@ -128,9 +128,9 @@ __meta__ = {
 }
 
 [node name="Label5" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 9442.0
+margin_top = 9694.0
 margin_right = 968.0
-margin_bottom = 9545.0
+margin_bottom = 9797.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 4 )
 text = "Next steps:"
@@ -141,9 +141,9 @@ __meta__ = {
 }
 
 [node name="Label6" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer"]
-margin_top = 9625.0
+margin_top = 9877.0
 margin_right = 968.0
-margin_bottom = 11386.0
+margin_bottom = 11638.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "If you are interested in fully learning Lushootseed, only using a phone app isn't going to give you the in-person conversation necessary to learn the entire language in all its depth and nuances (despite what some language companies want you to believe). Lushootseed learning opportunities are offered by the Puyallup and Tulalip tribes (note that Tulalip Lushootseed falls more into the Northern category, unlike the historical Southern dialect of the Seattle area). The University of Washington also offers Southern Lushootseed as a language course through their Department of American Indian Studies. Good luck!"
@@ -154,5 +154,6 @@ __meta__ = {
 }
 
 [node name="Back" parent="." instance=ExtResource( 3 )]
+
 [connection signal="resized" from="PanelContainer/MarginContainer" to="PanelContainer/MarginContainer" method="_on_MarginContainer_resized"]
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

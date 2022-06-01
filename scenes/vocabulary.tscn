@@ -4,8 +4,8 @@
 [ext_resource path="res://scenes/button.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/menu.gd" type="Script" id=3]
 [ext_resource path="res://tres/english_default_font.tres" type="DynamicFont" id=4]
-[ext_resource path="res://tres/dark_blue_rect.tres" type="StyleBox" id=5]
-[ext_resource path="res://tres/light_blue_rect.tres" type="StyleBox" id=6]
+[ext_resource path="res://tres/red.tres" type="StyleBox" id=5]
+[ext_resource path="res://tres/light_red_rect.tres" type="StyleBox" id=6]
 [ext_resource path="res://scenes/back_button.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxFlat" id=5]

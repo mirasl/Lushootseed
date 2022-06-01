@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/mini_card.gd" type="Script" id=1]
-[ext_resource path="res://tres/light_blue_rect.tres" type="StyleBox" id=2]
+[ext_resource path="res://tres/light_red_rect.tres" type="StyleBox" id=2]
 [ext_resource path="res://tres/english_default_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://tres/lushootseed_font.tres" type="DynamicFont" id=4]
 
