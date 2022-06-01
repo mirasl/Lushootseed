@@ -42,6 +42,7 @@ script = ExtResource( 2 )
 [node name="Back" parent="CanvasLayer" instance=ExtResource( 4 )]
 
 [node name="GrayPanel" type="Panel" parent="CanvasLayer"]
+visible = false
 margin_left = -7809.0
 margin_top = -3134.0
 margin_right = 8447.0
@@ -108,12 +109,12 @@ LName = "t̕uʔəlaltxʷ"
 EName = "Herring house"
 
 [node name="H" parent="." instance=ExtResource( 8 )]
-margin_left = 2015.72
-margin_top = 2025.88
-margin_right = 2065.72
-margin_bottom = 2113.88
+margin_left = 1989.72
+margin_top = 2024.88
+margin_right = 2039.72
+margin_bottom = 2112.88
 LName = "saʔcaqaɬ"
-EName = "Herring house"
+EName = "Water at the head of the bay"
 
 [node name="I" parent="." instance=ExtResource( 8 )]
 margin_left = 1699.61
@@ -124,10 +125,10 @@ LName = "səxʷt̕ičib"
 EName = "Place where one wades"
 
 [node name="J" parent="." instance=ExtResource( 8 )]
-margin_left = 1792.85
-margin_top = 3061.99
-margin_right = 1842.85
-margin_bottom = 3150.0
+margin_left = 1838.26
+margin_top = 3056.94
+margin_right = 1888.26
+margin_bottom = 3144.95
 LName = "sq̓ʷuʔalqʷuʔ"
 EName = "Confluence of waters"
 
@@ -293,19 +294,19 @@ EName = "Place where one whips the water"
 type = 1
 
 [node name="18" parent="." instance=ExtResource( 8 )]
-margin_left = 1175.4
-margin_top = 1326.08
-margin_right = 1225.4
-margin_bottom = 1414.08
+margin_left = 1169.39
+margin_top = 1302.05
+margin_right = 1219.39
+margin_bottom = 1390.05
 LName = "sxʷacəgʷiɬ"
 EName = "To lift a canoe"
 type = 1
 
 [node name="19" parent="." instance=ExtResource( 8 )]
-margin_left = 1233.65
-margin_top = 1376.17
-margin_right = 1283.65
-margin_bottom = 1464.17
+margin_left = 1214.12
+margin_top = 1360.42
+margin_right = 1264.12
+margin_bottom = 1448.42
 LName = "stataɬ"
 EName = "Fathoms"
 type = 1
@@ -347,19 +348,19 @@ EName = "A trail descends into the water"
 type = 1
 
 [node name="24" parent="." instance=ExtResource( 8 )]
-margin_left = 887.876
+margin_left = 868.794
 margin_top = 1724.27
-margin_right = 937.876
+margin_right = 918.794
 margin_bottom = 1812.27
 LName = "bulac̓"
 EName = "Where it emerges by bubbling"
 type = 1
 
 [node name="25" parent="." instance=ExtResource( 8 )]
-margin_left = 1261.65
-margin_top = 1831.87
-margin_right = 1311.65
-margin_bottom = 1919.87
+margin_left = 1281.85
+margin_top = 1829.63
+margin_right = 1331.85
+margin_bottom = 1917.63
 LName = "x̌ʷuqʷiqʷayəqs"
 EName = "Yellowish, greenish rushes on the point of land"
 type = 1
@@ -471,4 +472,5 @@ margin_bottom = 3041.2
 LName = "spapɬx̌ad"
 EName = "Marshes"
 type = 1
+
 [connection signal="pressed" from="CanvasLayer/Back" to="." method="_on_Back_pressed"]
