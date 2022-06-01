@@ -18,4 +18,7 @@ Q: "How can I contribute to the vocabulary words?"
 A: All you need to do is edit the vocab.json file - see CONTRIBUTE file for details!
 
 Q: "Why is this being made in a physics/game engine?"
-A: Because Godot's UI program works well and I know how to use it - I do plan on stripping the 3D (and maybe some 2D elements as well), so stay tuned.
+A: When I started work on this project, I wanted to leave open the possibility of including more interactive language-learning activities or games
+geared towards children. After some thought I instead decided to give the app a focus on simplicity and accessibility, but I already had the footprint in
+Godot. Godot's UI system is already servicable and can easily be exported to Android devices, so I figure there is not much reason to switch. In the future I
+may disable the 3D to reduce some unneeded bulk, but it is not a huge deal and would only save a few MBs anyways.
