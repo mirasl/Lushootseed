@@ -31,6 +31,7 @@ func create_search_box(results : Array) -> SearchBox:
 #	for child in $MarginContainer.get_children():
 	for child in get_children():
 		if child is SearchBox:
+			child.exit_flag = false
 			child.queue_free()
 	var search_box = preload("res://scenes/search_box.tscn")
 	search_box = search_box.instance()
@@ -40,8 +41,8 @@ func create_search_box(results : Array) -> SearchBox:
 	for card in results:
 		search_box.add_mini_card(card)
 	search_box.popup()
-	$GrayPanel.show()
 	search_box.connect("filter_selected", self, "_on_SearchBox_filter_selected")
+	$GrayPanel.show()
 	return search_box
 
 

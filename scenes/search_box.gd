@@ -4,6 +4,7 @@ signal filter_selected
 
 class_name SearchBox
 
+var exit_flag = true
 
 func _ready():
 	var x_button = get_close_button()
@@ -25,8 +26,9 @@ func _on_SearchBox_popup_hide():
 	for child in panel_container.get_children():
 		if child is MiniCard:
 			child.queue_free()
-	if get_tree().current_scene.get_filename() == "res://scenes/vocab_category_list.tscn":
+	if get_tree().current_scene.get_filename() == "res://scenes/vocab_category_list.tscn" and exit_flag:
 		get_parent().hide_gray_overlay()
+	exit_flag = true
 
 
 func _on_CategoryButton_item_selected(index):
