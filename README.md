@@ -25,7 +25,7 @@ The app can be installed on any android device by downloading the APK from the r
 
 Google Play has recently gotten stingy about the Play Store servers. As a result, Seattle Lushootseed is no longer available on the play store.
 
-This is a great demonstration of why it's necessary to preserve both media and languages, and is exactly why I open-sourced Seattle Lushootseed in the first place. As long as I'm alive, this app and repository isn't going anywhere ;)
+This is a great demonstration of why it's necessary to preserve both media and languages, and is exactly why I open-sourced Seattle Lushootseed in the first place. Rest assured, as long as I'm alive, this repository isn't going anywhere ;)
 
 # FAQ:
 
