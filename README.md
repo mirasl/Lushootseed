@@ -13,15 +13,21 @@ work is buried deeply in the internet, and most of it is largely unaccessible un
 ![Screenshot_20241009-134352](https://github.com/user-attachments/assets/43c569e3-f966-4e98-83f9-9d033af56a14)
 
 
-Features:
+# Features:
 - An explanation of the Lushootseed alphabet and its various sounds
 - A list of vocabulary words that is not hardcoded and flexible to updates (see CONTRIBUTE file)
 - A simple flashcard feature to practice the vocabulary terms
 - An interactive map of the Seattle area displaying various Lushootseed place names
 - Information about the history of the Lushootseed language
 
+# Installation:
+The app can be installed on any android device by downloading the APK from the releases tab.
 
-FAQ:
+Google Play has recently gotten stingy about the Play Store servers. As a result, Seattle Lushootseed is no longer available on the play store.
+
+This is a great demonstration of why it's necessary to preserve both media and languages, and is exactly why I open-sourced Seattle Lushootseed in the first place. As long as I'm alive, this app and repository isn't going anywhere ;)
+
+# FAQ:
 
 Q: "How can I contribute to the vocabulary words?"
 A: All you need to do is edit the vocab.json file - see CONTRIBUTE file for details!
